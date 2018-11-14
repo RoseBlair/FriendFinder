@@ -1,0 +1,53 @@
+var express = require("express");
+
+var app = express();
+
+var PORT = 3000;
+app.set('port', process.env.PORT || 3000);
+
+var path = require("path");
+
+// Parse application information
+//========================================================
+
+var bodyParser = require('body-parser')
+ 
+app.use(bodyParser.urlencoded({ extended: false }))
+ 
+app.use(bodyParser.json())
+ 
+app.use(bodyParser.json({ type: 'application/*+json' }))
+
+app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }))
+
+app.use(bodyParser.text({ type: 'text/html' }))
+
+//routes 
+//=====================================================================
+
+app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "app/public/home.html"));
+    // res.send("is this working?");
+});
+
+app.get("/survey", function(req, res) {
+    res.sendFile(path.join(__dirname, "app/public/survey.html"));
+});
+
+// app.get("/api/friends", function(req, res) {
+//     res.send(req.params.friends);
+// });
+
+// app.post("/api/friends", function(req, res) {
+//     res.send();
+// });
+
+
+
+
+//listener
+//======================================================================
+
+app.listen(PORT, function() {
+    console.log("app listening on port " + PORT);
+    });
