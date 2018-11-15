@@ -187,11 +187,23 @@
                 alert("complete all fields");
             }
 
-        else 
+        else {
+            var newFriend = {
+                name: $("#"),
+                photo: $("#photo"),
+                scores: []
+            };
+
+            $("form-control").each(function() {
+                newFriend.scores.push($this);
+                });
+            
+            
+        };
         
         //post data to friends api
 
-        postData(entry) {
+        function postData(entry) {
             $.post("api/friends", entry, function(data) {
                 console.log(data);
 
