@@ -10,7 +10,8 @@
 <h1>Survey Questions</h1>
 <h3>About You</h3>
 
-<form action="/action_page.php" method="post">
+<!-- <form action="/action_page.php" method="post"> -->
+<form action = "../data/friends.js" method = "post">
 
 <div class="form-group">
         <label for="formGroupExampleInput">Name (Required)</label>
@@ -147,9 +148,17 @@
 </form>
     <script>
 
+//Look over these to make sure they work.
+
     $( "#submitButton" ).click(function() {
         ;
         });
+
+    $("#nameInput").prop('required',true);
+
+    $("#urlInput").prop('required',true);
+
+     $(".form-control").prop('required',true);
          
     </script>
    
