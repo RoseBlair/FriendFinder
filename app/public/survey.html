@@ -7,11 +7,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="form-group">
+
+
+<form action="/action_page.php" method="post">
+    <div class="form-group">
+        
         <label for="sel1">Question 1</label>
         <p>Do you enjoy trying new things?</p>
-        <p>Select one:</p>
         <select class="form-control" id="sel1">
+            <option selected="true" disabled="disabled">Select One</option>
             <option>1 (strongly disagree)</option>
             <option>2</option>
             <option>3</option>
@@ -22,8 +26,8 @@
 
         <label for="sel2">Question 2</label>
         <p>Do you enjoy being out in nature?</p> 
-        <p>Select one:</p>
         <select class="form-control" id="sel2">
+            <option selected="true" disabled="disabled">Select One</option>
             <option>1 (strongly disagree)</option>
             <option>2</option>
             <option>3</option>
@@ -34,8 +38,8 @@
 
         <label for="sel3">Question 3</label>
         <p>Are you an analytical person?</p>
-        <p>Select one:</p>
         <select class="form-control" id="sel3">
+            <option selected="true" disabled="disabled">Select One</option>
             <option>1 (strongly disagree)</option>
             <option>2</option>
             <option>3</option>
@@ -46,8 +50,8 @@
 
         <label for="sel4">Question 4</label>
         <p>Are you a creative person?</p>
-        <p>Select one:</p>
         <select class="form-control" id="sel4">
+            <option selected="true" disabled="disabled">Select One</option>
             <option>1 (strongly disagree)</option>
             <option>2</option>
             <option>3</option>
@@ -58,8 +62,8 @@
         
         <label for="sel5">Question 5</label>
         <p>Do you enjoy spending time with people?</p>
-        <p>Select one:</p>
         <select class="form-control" id="sel5">
+            <option selected="true" disabled="disabled">Select One</option>
             <option>1 (strongly disagree)</option>
             <option>2</option>
             <option>3</option>
@@ -70,8 +74,8 @@
 
         <label for="sel6">Question 6</label>
         <p>Do you enjoy learning new things?</p>
-        <p>Select one:</p>
         <select class="form-control" id="sel6">
+            <option selected="true" disabled="disabled">Select One</option>
             <option>1 (strongly disagree)</option>
             <option>2</option>
             <option>3</option>
@@ -82,8 +86,8 @@
 
         <label for="sel7">Question 7</label>
         <p>When you have a set of instructions, do you follow them exactly?</p> 
-        <p>Select one:</p>
         <select class="form-control" id="sel7">
+            <option selected="true" disabled="disabled">Select One</option>
             <option>1 (strongly disagree)</option>
             <option>2</option>
             <option>3</option>
@@ -93,9 +97,9 @@
         </div>
 
         <label for="sel8">Question 8</label>
-        <p>Do you take time to self-reflect?</p>
-        <p>Select one:</p>  
+        <p>Do you take time to self-reflect?</p>  
         <select class="form-control" id="sel8">
+            <option selected="true" disabled="disabled">Select One</option>
             <option>1 (strongly disagree)</option>
             <option>2</option>
             <option>3</option>
@@ -106,8 +110,8 @@
 
         <label for="sel9">Question 9</label>
         <p>Are you easily bored?</p> 
-        <p>Select one:</p>
         <select class="form-control" id="sel9">
+            <option selected="true" disabled="disabled">Select One</option>
             <option>1 (strongly disagree)</option>
             <option>2</option>
             <option>3</option>
@@ -118,8 +122,8 @@
 
         <label for="sel10">Question 10</label>
         <p>Do you have a positive outlook on life?</p>
-        <p>Select one:</p>
         <select class="form-control" id="sel10">
+            <option selected="true" disabled="disabled">Select One</option>
             <option>1 (strongly disagree)</option>
             <option>2</option>
             <option>3</option>
@@ -128,15 +132,15 @@
         </select>
         </div>
 
-        <button type="button" class="btn btn-primary" id ="submitButton">Submit</button>
-
-              <script>
+        <button type="submit" class="btn btn-primary" id ="submitButton">Submit</button>
+</form>
+    <script>
 
     $( "#submitButton" ).click(function() {
-        window.location.href = "/survey";
+        ;
         });
          
-        </script>
+    </script>
    
     <!-- <script type="text/javascript" src="../data/friends.js"></script>
     <script type="text/javascript" src="../routing/apiRoutes.js"></script>
