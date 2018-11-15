@@ -184,8 +184,9 @@
 
     $("#submit").on("click", function(event){
 
-        
-         if ($(".form-control").val() === "default") {
+        event.preventDefault();
+
+        if ($(".form-control").val() === "default") {
                  alert("complete all fields");
              }
 
