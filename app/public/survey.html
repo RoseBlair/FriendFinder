@@ -55,7 +55,7 @@
         <select required class="form-control" id="sel3">
             <option selected="true" disabled="disabled" value="default">Select One</option>
             <option value="1">1 (strongly disagree)</option>
-            <option>2</option>
+            <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5 (strongly agree)</option>
@@ -67,7 +67,7 @@
         <select required class="form-control" id="sel4">
             <option selected="true" disabled="disabled" value="default">Select One</option>
             <option value="1">1 (strongly disagree)</option>
-            <option>2</option>
+            <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5 (strongly agree)</option>
@@ -184,17 +184,17 @@
 
     $("#submitForm").on("click", function(event){
 
-        console.log("hi");
+        
         event.preventDefault();
 
         if ($(".form-control").val() === "default") {
-                 alert("complete all fields");
+                 window.alert("complete all fields");
              }
 
          else {
             var newFriend = {
-                name: $("#nameInput"),
-                photo: $("#urlInput"),
+                name: $("#nameInput").val(),
+                photo: $("#urlInput").val(),
                 scores: [
                     $("#sel1").val().trim(),
                     $("#sel2").val().trim(),
@@ -217,9 +217,9 @@
                 displayModule();
             });
 
-             $("form-control").each(function() {
-                 newFriend.scores.push($this);
-                 });
+            
+          
+                
             
             
         };
