@@ -11,7 +11,7 @@
 <h3>About You</h3>
 
 <!-- <form action="/action_page.php" method="post"> -->
-<form action = "../app/data/friends.js" method = "post">
+<form action="/friends/api" method="get">
 
 <div class="form-group">
         <label for="formGroupExampleInput">Name (Required)</label>
@@ -27,152 +27,181 @@
         <label for="sel1">Question 1</label>
         <p>Do you enjoy trying new things?</p>
         <select required class="form-control" id="sel1">
-            <option selected="true" disabled="disabled">Select One</option>
-            <option>1 (strongly disagree)</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5 (strongly agree)</option>
+            <option selected="true" disabled="disabled" value="default">Select One</option>
+            <option value="1">1 (strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         </div>
 
         <label for="sel2">Question 2</label>
         <p>Do you enjoy being out in nature?</p> 
         <select required class="form-control" id="sel2">
-            <option selected="true" disabled="disabled">Select One</option>
-            <option>1 (strongly disagree)</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5 (strongly agree)</option>
+            <option selected="true" disabled="disabled" value="default">Select One</option>
+            <option value="1">1 (strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         </div>
 
         <label for="sel3">Question 3</label>
         <p>Are you an analytical person?</p>
         <select required class="form-control" id="sel3">
-            <option selected="true" disabled="disabled">Select One</option>
-            <option>1 (strongly disagree)</option>
+            <option selected="true" disabled="disabled" value="default">Select One</option>
+            <option value="1">1 (strongly disagree)</option>
             <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5 (strongly agree)</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         </div>
 
         <label for="sel4">Question 4</label>
         <p>Are you a creative person?</p>
         <select required class="form-control" id="sel4">
-            <option selected="true" disabled="disabled">Select One</option>
-            <option>1 (strongly disagree)</option>
+            <option selected="true" disabled="disabled" value="default">Select One</option>
+            <option value="1">1 (strongly disagree)</option>
             <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5 (strongly agree)</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         </div>
         
         <label for="sel5">Question 5</label>
         <p>Do you enjoy spending time with people?</p>
         <select required class="form-control" id="sel5">
-            <option selected="true" disabled="disabled">Select One</option>
-            <option>1 (strongly disagree)</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5 (strongly agree)</option>
+            <option selected="true" disabled="disabled" value="default">Select One</option>
+            <option value="1">1 (strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         </div>
 
         <label for="sel6">Question 6</label>
         <p>Do you enjoy learning new things?</p>
         <select required class="form-control" id="sel6">
-            <option selected="true" disabled="disabled">Select One</option>
-            <option>1 (strongly disagree)</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5 (strongly agree)</option>
+            <option selected="true" disabled="disabled" value="default">Select One</option>
+            <option value="1">1 (strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         </div>
 
         <label for="sel7">Question 7</label>
         <p>When you have a set of instructions, do you follow them exactly?</p> 
         <select required class="form-control" id="sel7">
-            <option selected="true" disabled="disabled">Select One</option>
-            <option>1 (strongly disagree)</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5 (strongly agree)</option>
+            <option selected="true" disabled="disabled" value="default">Select One</option>
+            <option value="1">1 (strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         </div>
 
         <label for="sel8">Question 8</label>
         <p>Do you take time to self-reflect?</p>  
         <select required class="form-control" id="sel8">
-            <option selected="true" disabled="disabled">Select One</option>
-            <option>1 (strongly disagree)</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5 (strongly agree)</option>
+            <option selected="true" disabled="disabled" value="default">Select One</option>
+            <option value="1">1 (strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         </div>
 
         <label for="sel9">Question 9</label>
         <p>Are you easily bored?</p> 
         <select required class="form-control" id="sel9">
-            <option selected="true" disabled="disabled">Select One</option>
-            <option>1 (strongly disagree)</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5 (strongly agree)</option>
+            <option selected="true" disabled="disabled" value="default">Select One</option>
+            <option value="1">1 (strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         </div>
 
         <label for="sel10">Question 10</label>
         <p>Do you have a positive outlook on life?</p>
         <select required class="form-control" id="sel10">
-            <option selected="true" disabled="disabled">Select One</option>
-            <option>1 (strongly disagree)</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5 (strongly agree)</option>
+            <option selected="true" disabled="disabled" value="default">Select One</option>
+            <option value="1">1 (strongly disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (strongly agree)</option>
         </select>
         </div>
 
         <button type="submit" class="btn btn-primary" id ="submitButton">Submit</button>
 </form>
-    <script>
 
-   
+<!-- display the friend that is the closest match -->
 
+
+<!-- <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+    
+<script type="text/javascript">
+
+    //require name and link to photo
 
     $("#nameInput").prop('required',true);
 
     $("#urlInput").prop('required',true);
 
-   
+    $("#submit").on("click", function(event){
 
         
+        if $($(".form-control").val() === "default") {
 
+            };
+        
+        //post data to friends api
 
-   ( "#submitButton" ).click(function() {
-    
-    var formData = JSON.stringify($("#myForm").serializeArray());
-   });
+        postData(entry) {
+            $.post("api/friends", entry, function(data) {
+                console.log(data);
 
+            });
+        };
+             
+    });
 
          
     </script>
    
-    <!-- <script type="text/javascript" src="../data/friends.js"></script>
-    <script type="text/javascript" src="../routing/apiRoutes.js"></script>
-    <script type="text/javascript" src="../routing/htmlRoutes.js"></script> -->
-    
+   
 </body>
 </html>  
     

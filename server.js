@@ -24,55 +24,20 @@ app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }))
 
 app.use(bodyParser.text({ type: 'text/html' }))
 
-//routes 
-//=====================================================================
 
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "app/public/home.html"));
-    // res.send("is this working?");
-});
 
-app.get("/survey", function(req, res) {
-    res.sendFile(path.join(__dirname, "app/public/survey.html"));
-});
+// Sets up the Express app to handle data parsing
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
- app.get("/api/friends", function(req, res) {
-    //  res.send(req.params.friends);
-     res.json(friends);
- });
 
-app.post("/api/friends", function(req, res) {
-    console.log(req.body);
-     var newFriend = {
-        name: "Mary Sanders",
-        photo: "http://static.tvtropes.org/pmwiki/pub/images/AverageMan1.jpg",
-        scores: [
-            2, 
-            3, 
-            2, 
-            3, 
-            2,
-            3,
-            2,
-            3,
-            2,
-            3
-        ]
-    }
 
-    friends.push(newFriend);
-    res.json(friends);
+require("./routing/apiRoutes")(app);
 
- });
 
-app.post("/api/friends", function(req, res) {
-    console.log(formData);
-    
+require("./routing/htmlRoutes")(app);
 
-    friends.push(newFriend);
-    res.json(friends);
 
- });
 
 
 
