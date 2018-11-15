@@ -211,18 +211,11 @@
 
             console.log(newFriend);
 
-            function postData(entry) {
-            $.post("api/friends", entry, function(data) {
-                console.log(data);
-                displayModule();
+        
+        $.post("api/friends", newFriend, function(data) {
+            console.log(friends);
+            displayModule();
             });
-
-            
-          
-                
-            
-            
-        };
 
 
         };
