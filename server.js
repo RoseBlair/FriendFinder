@@ -65,6 +65,14 @@ app.post("/api/friends", function(req, res) {
 
  });
 
+app.post("/api/friends", function(req, res) {
+    console.log(formData);
+    
+
+    friends.push(newFriend);
+    res.json(friends);
+
+ });
 
 
 
