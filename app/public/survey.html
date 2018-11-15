@@ -189,8 +189,8 @@
 
         else {
             var newFriend = {
-                name: $("#"),
-                photo: $("#photo"),
+                name: $("#nameInput"),
+                photo: $("#urlInput"),
                 scores: []
             };
 
@@ -206,8 +206,12 @@
         function postData(entry) {
             $.post("api/friends", entry, function(data) {
                 console.log(data);
-
+                displayModule();
             });
+
+            displayModule() {
+                
+            };
         };
              
     });
