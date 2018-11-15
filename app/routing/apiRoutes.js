@@ -1,8 +1,11 @@
 //routes 
 //=====================================================================
 
+var path = require("path");
 
-var friendPush = require("../data/friends");
+var friends = require("../data/friends.html");
+
+var surveys = require("../public/data/survey.html");
 
 function displayFriends(req, res) {
     res.json(friends.data);
@@ -20,12 +23,12 @@ function newFriend (req, res) {
 
 
 app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "app/public/home.html"));
+    res.sendFile(path.join(__dirname, "../public/home.html"));
     // res.send("is this working?");
 });
 
 app.get("/survey", function(req, res) {
-    res.sendFile(path.join(__dirname, "app/public/survey.html"));
+    res.sendFile(path.join(__dirname, "../public/survey.html"));
 });
 
  app.get("/api/friends", function(req, res) {
