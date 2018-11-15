@@ -12,7 +12,7 @@
 
 <!-- unable to make the following code work: -->
 <!-- <form action=""/friends/api" method="post"> -->
-    
+
 <form>
 
 <div class="form-group">
@@ -185,44 +185,43 @@
     $("#submit").on("click", function(event){
 
         
-        if ($(".form-control").val() === "default") {
-                alert("complete all fields");
-            }
+         if ($(".form-control").val() === "default") {
+                 alert("complete all fields");
+             }
 
-        else {
+         else {
             var newFriend = {
                 name: $("#nameInput"),
                 photo: $("#urlInput"),
                 scores: [
-                    $("#question1").val(),
-                    $("#question2").val(),
-                    $("#question3").val(),
-                    $("#question4").val(),
-                    $("#question5").val(),
-                    $("#question6").val(),
-                    $("#question7").val(),
-                    $("#question8").val(),
-                    $("#question9").val(),
-                    $("#question10").val()
+                    $("#sel1").val().trim(),
+                    $("#sel2").val().trim(),
+                    $("#sel3").val().trim(),
+                    $("#sel4").val().trim(),
+                    $("#sel5").val().trim(),
+                    $("#sel6").val().trim(),
+                    $("#sel7").val().trim(),
+                    $("#sel8").val().trim(),
+                    $("#sel9").val().trim(),
+                    $("#sel10").val().trim()
                 ]
-            };
+             };
 
-            // $("form-control").each(function() {
-            //     newFriend.scores.push($this);
-            //     });
-            
-            
-        };
-        
-//post data to friends api
+            console.log(newFriend);
 
-        function postData(entry) {
+            function postData(entry) {
             $.post("api/friends", entry, function(data) {
                 console.log(data);
                 displayModule();
             });
 
-// I then need to build a function to display the module.
+             $("form-control").each(function() {
+                 newFriend.scores.push($this);
+                 });
+            
+            
+        };
+
 
         };
              
