@@ -30,41 +30,4 @@ module.exports = function(app) {
         });
 
 
-    };
-
-
-
-    
-
-    
-
-    app.post("/api/friends", function(req, res, friendRequire) {
-        console.log(req.body);
-        //  var newFriend = {
-        //     name: "Mary Sanders",
-        //     photo: "http://static.tvtropes.org/pmwiki/pub/images/AverageMan1.jpg",
-        //     scores: [
-        //         2, 
-        //         3, 
-        //         2, 
-        //         3, 
-        //         2,
-        //         3,
-        //         2,
-        //         3,
-        //         2,
-        //         3
-        //     ]
-        // }
-
-        friends.push(newFriend);
-        res.json(friends);
-
-    });
-
-
-    app.get("/api/friends", function(req, res) {
-        json.res(newFriend);
-        });
-
 };
