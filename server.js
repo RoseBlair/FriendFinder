@@ -32,13 +32,19 @@ app.use(express.json());
 
 
 
-require("./routing/apiRoutes")(app);
+app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname, "app/public/home.html"))
+});
+
+app.get("/survey", function (req, res) {
+    res.sendFile(path.join(__dirname, "app/public/survey.html"))
+})
 
 
-require("./routing/htmlRoutes")(app);
 
+var htmlPath = path.join("app", "data", "routing", "apiRoutes.html");
 
-
+var apiPath = path.join("app", "data", "routing", "htmlRoutes.html");
 
 
 //listener
