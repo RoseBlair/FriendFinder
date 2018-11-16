@@ -11,10 +11,6 @@ var friends = require("../data/friends");
     });
 
     app.post("/api/friends", function(req, res){
-        function findTheBest() {
-            
-        };
-        
         res.json(friends[0]);
         });
 
