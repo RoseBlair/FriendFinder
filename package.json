@@ -1,7 +1,7 @@
 {
   "name": "friendfinder",
   "version": "1.0.0",
-  "description": "",
+  "description": "search for compatable friends",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.18.3",
