@@ -3,26 +3,19 @@
 
 module.exports = function(app) {
 
-const express = require("express");
-
-const app = express;
-
-var path = require("path");
-
-var friends = require("../data/friends.html");
-
-var newFriend = require("../public/survey.html");
-
-
+var friends = require("../data/friends");
 
     app.get("/api/friends", function(req, res) {
         // res.send(req.params.friends);
-        Response.send("this is working")
-        // res.json(friends);
+        res.json(friends)
     });
 
-    app.post("/api/friends", function(res, req){
-        res.json(newFriend);
+    app.post("/api/friends", function(req, res){
+        function findTheBest() {
+            
+        };
+        
+        res.json(friends[0]);
         });
 
 
